@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}要介護見込みだった場合{% endblock %}
+{% block content %}
+
+<div class="container">
+     <h1>じぇねトモ</h1>
+     <h2>判定結果</h2>
+     <h3>あなたは要介護見込みと判定されました。</h3>
+     <h4>今後要介護となる可能性</h4>
+     <h2>{{ value }}%</h2>
+     <br>
+     <h4>登録はこちら</h4>
+     <a href="/signup" role="button"><button class="btn btn-primary">新規登録</button></a>
+</div>
+{% endblock %}

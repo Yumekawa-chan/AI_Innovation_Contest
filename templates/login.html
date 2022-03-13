@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}ログインページ{% endblock %}
+{% block content %}
+
+<div class="container">
+     <h1>じぇねトモ</h1>
+     <h2>ログイン画面</h2>
+     <form method="POST">
+          <label for="" class="form-label">ユーザー名</label>
+          <input type="text" name = "username" class = "form-control">
+          <label for="body" class = "form-label">パスワード</label>
+          <input type="password" name="password" class = "form-control">
+          <br>
+          <input type="submit" value="ログイン" class ="btn btn-primary">
+     </form>
+</div>
+{% endblock %}

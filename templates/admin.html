@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}admin{% endblock %}
+
+{% block content %}
+<div class="container">
+     <h1>じぇねトモ</h1>
+     <h2>管理者画面</h2>
+     <p><br></p>
+     <h3>マッチ相手の追加</h3>
+     <p><br></p>
+     <form method="POST">
+          <label for="name">名前</label>
+          <input type="text" name = "name"><br><br>
+          <label for="age">年齢</label>
+          <input type="age" name="age"><br><br>
+          <label for="job">職業</label>
+          <input type="job" name="job"><br><br>
+          <label for="hobby">趣味</label>
+          <input type="age" name="hobby"><br><br>
+          <br>
+          <input type="submit" value="新規登録">
+     </form>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}メインページ{% endblock %}
+
+{% block content %}
+<div class="container">
+     <h1>じぇねトモ</h1>
+     <h2>ユーザーページ</h2>
+     <h3>ようこそ！{{ username }}さん！</h3>
+     <h3>～現在のマッチ候補～</h3>
+     {% for matcher in matchers %}
+     <person>
+          <p>--------------------------------------------------------</p> 
+          <h4>名前: {{ matcher.name }}</h4>
+          <h4>年齢: {{ matcher.age }}歳</h4>
+          <h4>職業: {{ matcher.job }}</h4>
+          <h4>趣味: {{ matcher.hobby }}</h4>
+     </person>
+     <button class = "btn btn-success">いいかも！</button>
+     <a href="/{{matcher.id}}/delete" role="botton"><button class = "btn btn-danger">ごめんなさい...</button></a>
+     {% endfor %}
+     {% if matchers |length > 0 %} 
+     <p>--------------------------------------------------------</p> 
+     {% endif %}
+     {% if matchers |length == 0 %} 
+     <h4>現在のマッチ候補は見つかりませんでした...</h4>
+     {% endif %}
+     <p><br></p>
+     <a href="/logout" role="button"><button class="btn btn-primary">ログアウト</button></a>
+</div>
+{% endblock %}
