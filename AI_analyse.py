@@ -1,44 +1,42 @@
 import joblib 
 
-def analyze(data):
+def analyze(data): # AIモデルから予測結果を取得
      model = joblib.load('./model.pkl')
      pred = model.predict(data)
      return pred
 
-def percent(data):
-     lonely = int(data[0][5]) # 0:25,1:15,2:8,3:0
-     age = int(data[0][0]) # 75~:25,70~74:15,65~69:8,~64:0
-     sick = int(data[0][2]) # 1:25,0:0
-     excersice = int(data[0][6]) # 0:25,1~2:15,3~:0
+def percent(data): # 調査結果画面での％表示
+     lonely = int(data[0][5])
+     age = int(data[0][0])
+     sick = int(data[0][2])
+     money = int(data[0][7])
 
      if lonely == 0:
-          lonely = 25
+          lonely = 40
      elif lonely == 1:
-          lonely = 15
+          lonely = 30
      elif lonely == 2:
-          lonely = 8
+          lonely = 15
      else:
-          lonely = 0
+          lonely = 7
      
      if 74 < age:
-          age = 25
-     elif 69 < age < 75:
-          age = 15
-     elif 64 < age < 70:
-          age = 8
+          age = 30
+     elif 67 < age < 75:
+          age = 20
+     elif 59 < age < 68:
+          age = 10
      else:
           age = 0
      
      if sick == 0:
           sick = 0
      else:
-          sick = 1
+          sick = 20
      
-     if excersice == 0:
-          excersice = 25
-     elif 1 <= excersice <= 2:
-          excersice = 15
+     if money > 1999:
+          money = 5
      else:
-          excersice = 0
+          money = 10
      
-     return lonely + age + sick + excersice
+     return lonely + age + sick + money
