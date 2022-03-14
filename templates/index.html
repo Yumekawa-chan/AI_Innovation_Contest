@@ -15,7 +15,7 @@
           <h4>職業: {{ matcher.job }}</h4>
           <h4>趣味: {{ matcher.hobby }}</h4>
      </person>
-     <button class = "btn btn-success">いいかも！</button>
+     <a href="/{{matcher.id}}/delete" role="botton"><button class = "btn btn-success">いいかも！</button></a>
      <a href="/{{matcher.id}}/delete" role="botton"><button class = "btn btn-danger">ごめんなさい...</button></a>
      {% endfor %}
      {% if matchers |length > 0 %} 

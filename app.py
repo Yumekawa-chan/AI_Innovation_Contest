@@ -6,7 +6,6 @@ from werkzeug.security import generate_password_hash,check_password_hash
 from flask_bootstrap import Bootstrap
 import os
 from flask_login import UserMixin,LoginManager,login_user,logout_user,login_required,current_user
-import pytz
 import AI_analyse
 
 
