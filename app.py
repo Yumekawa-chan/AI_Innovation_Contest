@@ -8,7 +8,7 @@ from flask_login import UserMixin,LoginManager,login_user,logout_user,login_requ
 import AI_analyse
 
 
-app = Flask(__name__, static_url_path='./static')
+app = Flask(__name__, static_url_path='/static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///info.db'
 app.config['SECRET_KEY'] = os.urandom(24)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
