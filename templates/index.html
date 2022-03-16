@@ -3,19 +3,21 @@
 
 {% block content %}
 <div class="container">
-     <h1>じぇねトモ</h1>
+     <img src="/static/images/icon.jpg" width="250px">
      <h2>ユーザーページ</h2>
      <h3>ようこそ！{{ username }}さん！</h3>
      <h3>～現在のマッチ候補～</h3>
      {% for matcher in matchers %}
      <person>
           <p>--------------------------------------------------------</p> 
-          <h4>名前: {{ matcher.name }}</h4>
-          <h4>年齢: {{ matcher.age }}歳</h4>
-          <h4>職業: {{ matcher.job }}</h4>
-          <h4>趣味: {{ matcher.hobby }}</h4>
+          <div id = "ismutch">
+               <h4>名前: {{ matcher.name }}</h4>
+               <h4>年齢: {{ matcher.age }}歳</h4>
+               <h4>職業: {{ matcher.job }}</h4>
+               <h4>趣味: {{ matcher.hobby }}</h4>
+          </div>    
      </person>
-     <a href="/{{matcher.id}}/delete" role="botton"><button class = "btn btn-success">いいかも！</button></a>
+     <a id = "red"><button class = "btn btn-success">いいかも！</button></a>
      <a href="/{{matcher.id}}/delete" role="botton"><button class = "btn btn-danger">ごめんなさい...</button></a>
      {% endfor %}
      {% if matchers |length > 0 %} 
@@ -27,4 +29,13 @@
      <p><br></p>
      <a href="/logout" role="button"><button class="btn btn-primary">ログアウト</button></a>
 </div>
+
+<script>
+     const change = document.querySelector("#ismutch");
+
+     const red = document.querySelector('#red');
+     red.addEventListener('click', () => {
+     change.style.color = 'red';
+     });
+</script>
 {% endblock %}
