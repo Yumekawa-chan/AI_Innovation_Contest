@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import render_template,request,redirect
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_bootstrap import Bootstrap
 import os
@@ -9,13 +8,12 @@ from flask_login import UserMixin,LoginManager,login_user,logout_user,login_requ
 import AI_analyse
 
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='./static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///info.db'
 app.config['SECRET_KEY'] = os.urandom(24)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
-
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -28,13 +26,11 @@ class Younger(db.Model): # 若者テーブル
     job = db.Column(db.String(100), nullable=False)
     hobby = db.Column(db.String(100), nullable=False)
 
-
 class User(UserMixin,db.Model): # ユーザテーブル
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30),unique=True)
     password = db.Column(db.String(12))
     ai_survey = db.Column(db.String(5)) # 削除
-
 
 
 @login_manager.user_loader
@@ -65,7 +61,6 @@ def signup():
     else:
         return render_template("signup.html")
         
-
 @app.route('/login',methods=["GET","POST"]) # ログイン画面
 def login():
     if request.method == "POST":
@@ -84,7 +79,6 @@ def login():
 def logout():
     logout_user()
     return redirect("/")
-
 
 @app.route('/survey',methods=["GET","POST"]) # 調査画面
 def survey():
@@ -106,9 +100,8 @@ def survey():
             return render_template("dn_need.html")
         elif flag == [1]:
             return render_template("n_help.html",value = value)
-        else: # AI判定にエラーが出た場合は再入力
+        else:
             return render_template("survey.html")
-
     else:
         return render_template("survey.html")
 
