@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 from flask_bootstrap import Bootstrap
 import os
 from flask_login import UserMixin,LoginManager,login_user,logout_user,login_required,current_user
-import AI_analyse
+from app import AI_analyse
 
 
 app = Flask(__name__, static_url_path='/static')
@@ -136,5 +136,5 @@ def delete(id): # ごめんなさい...の処理
     return redirect("/index")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # ファイルの実行
     app.run(debug=True)
