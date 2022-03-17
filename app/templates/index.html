@@ -15,9 +15,11 @@
                <h4>年齢: {{ matcher.age }}歳</h4>
                <h4>職業: {{ matcher.job }}</h4>
                <h4>趣味: {{ matcher.hobby }}</h4>
+               <img src="../static/image/people/{{ matcher.img }}.jpg" width="250px">
           </div>    
      </person>
-     <a id = "red"><button class = "btn btn-success">いいかも！</button></a>
+     <p><br></p>
+     <a><button class = "btn btn-success">いいかも！</button></a>
      <a href="/{{matcher.id}}/delete" role="botton"><button class = "btn btn-danger">ごめんなさい...</button></a>
      {% endfor %}
      {% if matchers |length > 0 %} 
@@ -31,11 +33,6 @@
 </div>
 
 <script>
-     const change = document.querySelector("#ismutch");
-
-     const red = document.querySelector('#red');
-     red.addEventListener('click', () => {
-     change.style.color = 'red';
-     });
+     
 </script>
 {% endblock %}

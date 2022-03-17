@@ -25,12 +25,12 @@ class Younger(db.Model): # 若者テーブル
     age = db.Column(db.String(5),  nullable=False)
     job = db.Column(db.String(100), nullable=False)
     hobby = db.Column(db.String(100), nullable=False)
+    img = db.Column(db.String(10), nullable=False)
 
 class User(UserMixin,db.Model): # ユーザテーブル
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30),unique=True)
     password = db.Column(db.String(12))
-    ai_survey = db.Column(db.String(5)) # 削除
 
 
 @login_manager.user_loader
@@ -120,7 +120,8 @@ def admin(): # 管理者専用画面
         age = request.form.get('age')
         job = request.form.get('job')
         hobby = request.form.get('hobby')
-        person = Younger(name=name,age=age,job=job,hobby=hobby)
+        img = request.form.get('img')
+        person = Younger(name=name,age=age,job=job,hobby=hobby,img=img)
         db.session.add(person)
         db.session.commit()
         return redirect("/index")
