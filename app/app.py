@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 from flask_bootstrap import Bootstrap
 import os
 from flask_login import UserMixin,LoginManager,login_user,logout_user,login_required,current_user
-from app import AI_analyse
+import AI_analyse
 
 
 app = Flask(__name__, static_url_path='/static')

@@ -11,7 +11,8 @@ def percent(data): # 調査結果画面での％表示
      sick = int(data[0][2])
      money = int(data[0][7])
 
-     if lonely == 0:
+
+     if lonely == 0: # 孤独度（7~40）
           lonely = 40
      elif lonely == 1:
           lonely = 30
@@ -20,7 +21,7 @@ def percent(data): # 調査結果画面での％表示
      else:
           lonely = 7
      
-     if 74 < age:
+     if 74 < age: # 年齢（0~30）
           age = 30
      elif 67 < age < 75:
           age = 20
@@ -29,12 +30,12 @@ def percent(data): # 調査結果画面での％表示
      else:
           age = 0
      
-     if sick == 0:
+     if sick == 0: # 過去の重病の有無（0 or 20）
           sick = 0
      else:
           sick = 20
      
-     if money > 1999:
+     if money > 1999: # 貯金（5 or 10）
           money = 5
      else:
           money = 10
