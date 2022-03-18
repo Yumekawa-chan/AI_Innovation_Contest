@@ -41,8 +41,7 @@
 ### ユーザー画面
 <img src = "https://user-images.githubusercontent.com/82374688/158976266-a3154ea2-e32b-430f-ba7e-4bea7df5a1cd.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/158976404-09077093-469d-4229-a6ed-f3c63269ebf2.png" width=300px>
 
-マッチングをメインに行う画面です。「～現在のマッチ候補～」に表示されているサポーターに「いいかも！」をすると、「～いいかも！をした人～」にそのサポーターが表示されます。
-"ログアウト"ボタンを押下すると、トップ画面に遷移します。
+マッチングをメインに行う画面です。「～現在のマッチ候補～」に表示されているサポーターに「いいかも！」をすると、「～いいかも！をした人～」にそのサポーターが表示されます。"解除"ボタンを押下すると、そのサポーターの情報はユーザー画面から削除されます。"ログアウト"ボタンを押下すると、トップ画面に遷移します。
 
 ### 管理者画面
 <img src = "https://user-images.githubusercontent.com/82374688/158977147-3f80118b-c288-4486-8ce1-bebbb1eed7ed.png" width=300px>
@@ -52,5 +51,20 @@
 
 写真は./app/static/images/peopleフォルダーのjpg方式で保存された画像名を入力します。
 
+## データ分析
+調査画面で入力した情報は機械学習の手法である「RandomForest」によって学習・テストされたdataset.csvを基に分析されています。
 
+要介護見込み画面で表示されている確率は、datasetの独立した項目を4つ選別し、それぞれに重みを付けて計算されています。
+
+## 環境
+本アプリケーションはFlaskを利用しています。そのため、起動にはPythonのインストールと以下のモジュールが必要です。
+
+`flask flask-sqlalchemy flask-bootstrap flask-login`
+
+## 文責
+
+* 制作チーム 鈴木総合研究所
+* 所属 東京電機大学,立教大学大学院
+
+<img src = "https://user-images.githubusercontent.com/82374688/158979845-af480279-380e-474f-8cd5-ddd19241154d.png" width=400px>
 
