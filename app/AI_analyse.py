@@ -1,7 +1,7 @@
 import joblib 
 
 def analyze(data): # AIモデルから予測結果を取得
-     model = joblib.load('./model.pkl')
+     model = joblib.load("./model.pkl") 
      pred = model.predict(data)
      return pred
 
