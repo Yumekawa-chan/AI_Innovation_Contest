@@ -27,6 +27,14 @@ class Younger(db.Model): # 若者テーブル
     hobby = db.Column(db.String(100), nullable=False)
     img = db.Column(db.String(10), nullable=False)
 
+class Candidate(db.Model): # いいかも！した人
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    age = db.Column(db.String(5),  nullable=False)
+    job = db.Column(db.String(100), nullable=False)
+    hobby = db.Column(db.String(100), nullable=False)
+    img = db.Column(db.String(10), nullable=False)
+
 class User(UserMixin,db.Model): # ユーザテーブル
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30),unique=True)
@@ -47,7 +55,8 @@ def index():
     username = current_user.username
     if request.method == "GET":
         matchers = Younger.query.all()
-        return render_template("/index.html",username=username,matchers = matchers)
+        candidate = Candidate.query.all()
+        return render_template("/index.html",username=username,matchers = matchers,candidates = candidate)
 
 @app.route('/signup',methods=["GET","POST"]) # 新規登録画面
 def signup():
@@ -128,10 +137,20 @@ def admin(): # 管理者専用画面
     else:
         return render_template("admin.html")
 
+@app.route('/<int:id>/good',methods=["GET"])
+@login_required
+def good(id): # いいかも！の処理
+    person = Younger.query.get(id)
+    candidate = Candidate(name=person.name,age=person.age,job=person.job,hobby=person.hobby,img=person.img)
+    db.session.delete(person)
+    db.session.add(candidate)
+    db.session.commit()
+    return redirect("/index")
+
 @app.route('/<int:id>/delete',methods=["GET"])
 @login_required
-def delete(id): # ごめんなさい...の処理
-    person = Younger.query.get(id)
+def delete(id): # 解除の処理
+    person = Candidate.query.get(id)
     db.session.delete(person)
     db.session.commit()
     return redirect("/index")

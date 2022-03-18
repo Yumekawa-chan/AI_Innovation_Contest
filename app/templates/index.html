@@ -19,8 +19,7 @@
           </div>    
      </person>
      <p><br></p>
-     <a><button class = "btn btn-success">いいかも！</button></a>
-     <a href="/{{matcher.id}}/delete" role="botton"><button class = "btn btn-danger">ごめんなさい...</button></a>
+     <a href="/{{matcher.id}}/good" role="botton"><button class = "btn btn-success">いいかも！</button></a>
      {% endfor %}
      {% if matchers |length > 0 %} 
      <p>--------------------------------------------------------</p> 
@@ -29,10 +28,29 @@
      <h4>現在のマッチ候補は見つかりませんでした...</h4>
      {% endif %}
      <p><br></p>
+     <h3>～いいかも！をした人～</h3>
+     {% for candidate in candidates %}
+     <person>
+          <p>--------------------------------------------------------</p> 
+          <div id = "ismutch">
+               <h4>名前: {{ candidate.name }}</h4>
+               <h4>年齢: {{ candidate.age }}歳</h4>
+               <h4>職業: {{ candidate.job }}</h4>
+               <h4>趣味: {{ candidate.hobby }}</h4>
+               <img src="../static/image/people/{{ candidate.img }}.jpg" width="250px">
+          </div>    
+     </person>
+     <p><br></p>
+     <a href="/{{candidate.id}}/delete" role="botton"><button class = "btn btn-danger">解除</button></a>
+     {% endfor %}
+     {% if candidates |length > 0 %} 
+     <p>--------------------------------------------------------</p> 
+     {% endif %}
+     {% if candidates |length == 0 %} 
+     <h4>いいかも！をした人はいません。</h4>
+     {% endif %}
+     <p><br></p>
      <a href="/logout" role="button"><button class="btn btn-primary">ログアウト</button></a>
 </div>
 
-<script>
-     
-</script>
 {% endblock %}
