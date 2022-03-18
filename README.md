@@ -17,12 +17,13 @@
 
 <img src = "https://user-images.githubusercontent.com/82374688/158982175-09f8e2d6-4645-4754-bfa3-09ed30e418d0.png" width=600px>
 
+#### 本アプリケーションはスマホ操作を想定しています。F12キーで開発者モードを開き、
 
 ### トップ画面
 
 <img src = "https://user-images.githubusercontent.com/82374688/158966566-8ab6c713-9833-4fa5-870b-cff4fa8c163f.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/158966704-a684a5b7-2d4c-44b6-b855-04394632e0e8.png" width=300px>
 
-本アプリの説明がメインの画面です。新規ユーザーは"今すぐ分析"ボタン、既に会員のユーザーは"ログイン"ボタンを押下し、分析画面に遷移します。
+本アプリケーションの説明がメインの画面です。新規ユーザーは"今すぐ分析"ボタン、既に会員のユーザーは"ログイン"ボタンを押下し、分析画面に遷移します。
 
 ### 調査画面
 <img src = "https://user-images.githubusercontent.com/82374688/158969566-691170df-6220-4920-ab10-4f9bfb57768c.png" width=300px>
