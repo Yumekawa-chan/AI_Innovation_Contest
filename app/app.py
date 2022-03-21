@@ -139,7 +139,7 @@ def admin(): # 管理者専用画面
 
 @app.route('/<int:id>/good',methods=["GET"])
 @login_required
-def good(id): # いいかも！の処理
+def good(id): # 依頼！の処理
     person = Younger.query.get(id)
     candidate = Candidate(name=person.name,age=person.age,job=person.job,hobby=person.hobby,img=person.img)
     db.session.delete(person)

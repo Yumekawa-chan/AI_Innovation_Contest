@@ -19,7 +19,7 @@
           </div>    
      </person>
      <p><br></p>
-     <a href="/{{matcher.id}}/good" role="botton"><button class = "btn btn-success">いいかも！</button></a>
+     <a href="/{{matcher.id}}/good" role="botton"><button class = "btn btn-success">依頼！</button></a>
      {% endfor %}
      {% if matchers |length > 0 %} 
      <p>--------------------------------------------------------</p> 
@@ -28,7 +28,7 @@
      <h4>現在のマッチ候補は見つかりませんでした...</h4>
      {% endif %}
      <p><br></p>
-     <h3>～いいかも！をした人～</h3>
+     <h3>～依頼をした人～</h3>
      {% for candidate in candidates %}
      <person>
           <p>--------------------------------------------------------</p> 
@@ -47,7 +47,7 @@
      <p>--------------------------------------------------------</p> 
      {% endif %}
      {% if candidates |length == 0 %} 
-     <h4>いいかも！をした人はいません。</h4>
+     <h4>依頼をした人はいません。</h4>
      {% endif %}
      <p><br></p>
      <a href="/logout" role="button"><button class="btn btn-primary">ログアウト</button></a>
