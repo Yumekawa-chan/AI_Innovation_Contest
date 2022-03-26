@@ -26,36 +26,36 @@
 
 ### トップ画面
 
-<img src = "https://user-images.githubusercontent.com/82374688/158966566-8ab6c713-9833-4fa5-870b-cff4fa8c163f.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/158966704-a684a5b7-2d4c-44b6-b855-04394632e0e8.png" width=300px>
+<img src = "https://user-images.githubusercontent.com/82374688/160223286-9d16771c-ec51-47b0-803e-4a68bca43f86.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/160223260-a926c80a-c5b9-4a05-ab39-becf40e6d19f.png" width=300px>
 
 本アプリケーションの説明がメインの画面です。新規ユーザーは"今すぐ分析"ボタン、登録済みの利用会員は"ログイン"ボタンを押下し、分析画面に遷移します。
 
 ### 調査画面
-<img src = "https://user-images.githubusercontent.com/82374688/158969566-691170df-6220-4920-ab10-4f9bfb57768c.png" width=300px>
+<img src = "https://user-images.githubusercontent.com/82374688/160223309-6764b7d5-2d15-410e-9889-82636911a843.png" width=300px>
 
 分析対象となるシニアユーザーの情報を入力します。空欄なく入力が完了したら、"完了！"ボタンを押下して入力を送信します。
 
 ### 分析結果画面
-<img src = "https://user-images.githubusercontent.com/82374688/158974278-1836f681-ac02-44d6-96bd-a6dc884e5937.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/158974382-7e174d20-815f-4625-bd11-a61321504ac9.png" width=300px>
+<img src = "https://user-images.githubusercontent.com/82374688/160223327-6d46edec-56e8-4b18-9e75-01dfa56d994c.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/160223336-44404688-5505-4820-9159-f9dd96e7a662.png" width=300px>
 
 調査画面に入力された情報を基にAIが分析し、今後3年以内に介護が必要となる見込みの有無を判別します。「要介護見込み」と判定された場合は、その確率が表示され、新規登録を促されます。
 
 ### 新規登録・ログイン画面
-<img src = "https://user-images.githubusercontent.com/82374688/158975093-32ce2f69-a568-4955-a91a-6d27ab935fee.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/158975257-fd3943d2-28a7-42c1-8b5e-f06bf03fd6b8.png" width=300px>
+<img src = "https://user-images.githubusercontent.com/82374688/160223366-0038e63c-e714-449c-a913-4a52b5eb34ce.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/160223370-e4f72dee-5ffa-4b1b-b473-9db32c4e7ef8.png" width=300px>
 
 新規登録画面では登録したいユーザー名とパスワードを入力します。今回はどちらも文字数や使用文字の指定はございません。
 
 ログイン画面では登録した情報を入力します。
 
 ### ユーザー画面
-<img src = "https://user-images.githubusercontent.com/82374688/158976266-a3154ea2-e32b-430f-ba7e-4bea7df5a1cd.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/158976404-09077093-469d-4229-a6ed-f3c63269ebf2.png" width=300px>
+<img src = "https://user-images.githubusercontent.com/82374688/160223563-678c88ac-c7e0-44b2-8d5e-56ca057775f3.png" width=300px><img src = "https://user-images.githubusercontent.com/82374688/160223507-e64dc500-df54-4aae-abd1-c67fee1d8e91.png" width=300px>
 
 マッチングをメインに行う画面です。「～現在のマッチ候補:親御様のサポートを依頼しますか？～」に表示されているサポーター会員に「依頼する！」を押下すると、「～依頼する！をした人～」にそのサポーター会員が表示されます。"解除"ボタンを押下すると、そのサポーター会員の情報はユーザー画面から削除されます。"ログアウト"ボタンを押下すると、トップ画面に遷移します。
 
 ( 注：実際の運用においては、「依頼する！」が押下されたあとに、運営側にてシニア会員とサポーター会員の双方に連絡を行い、両者の同意を得た上で、正式に担当サポーターとしてアサインすることになります。シニア会員向けは、主に電話にて連絡を行う想定ですが、サポーター会員向けの連絡は、アプリ上で自動的に行うようにすることを想定しています。)
 
 ### 管理者画面
-<img src = "https://user-images.githubusercontent.com/82374688/158977147-3f80118b-c288-4486-8ce1-bebbb1eed7ed.png" width=300px>
+<img src = "https://user-images.githubusercontent.com/82374688/160223593-08d85248-b710-419e-b335-c0067da848b5.png" width=300px>
 
 デモプログラム限定の通常のボタン操作ではたどり着くことができない画面です。（http://127.0.0.1:5000/admin）　
 
