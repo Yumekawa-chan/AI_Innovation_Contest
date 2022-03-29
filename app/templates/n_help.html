@@ -2,15 +2,15 @@
 {% block title %}要介護見込みだった場合{% endblock %}
 
 {% block content %}
-<div class="container">
-     <img src="../static/image/icon.jpg" width="250px">
+<div class = "container">
+     <img src = "../static/image/icon.jpg" width = "250px">
      <h2>判定結果</h2>
-     <h3>AI分析によると、親御様は今後2年以内に『<span style="font-weight: bold;">要介護となる見込みが高い</span>』と判定されました。</h3>
+     <h3>AI分析によると、親御様は今後2年以内に『<span style = "font-weight: bold;">要介護となる見込みが高い</span>』と判定されました。</h3>
      <h4>今後3年以内に要介護となる可能性</h4>
      <h2>{{ value }}%</h2>
      <br>
      <h4>今すぐ登録をして、親御様を定期訪問し、サポートしてくれる若者会員を探しましょう！</h4>
-     <a href="/signup" role="button"><button class="btn btn-primary">新規登録</button></a><br><br>
-     <a href="/" role="button"><button class="btn btn-primary">トップページ</button></a>
+     <a href = "/signup" role = "button"><button class = "btn btn-primary">新規登録</button></a><br><br>
+     <a href = "/" role = "button"><button class = "btn btn-primary">トップページ</button></a>
 </div>
 {% endblock %}

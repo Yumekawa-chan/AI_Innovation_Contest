@@ -10,7 +10,7 @@
      {% for matcher in matchers %}
      <person>
           <p>--------------------------------------------------------</p> 
-          <div id = "ismutch">
+          <div>
                <h4>名前: {{ matcher.name }}</h4>
                <h4>年齢: {{ matcher.age }}歳</h4>
                <h4>職業: {{ matcher.job }}</h4>
@@ -19,7 +19,7 @@
           </div>    
      </person>
      <p><br></p>
-     <a href="/{{matcher.id}}/good" role="botton"><button class = "btn btn-success">依頼！</button></a>
+     <a href="/{{matcher.id}}/good" role="button"><button class = "btn btn-success">依頼！</button></a>
      {% endfor %}
      {% if matchers |length > 0 %} 
      <p>--------------------------------------------------------</p> 
@@ -32,7 +32,7 @@
      {% for candidate in candidates %}
      <person>
           <p>--------------------------------------------------------</p> 
-          <div id = "ismutch">
+          <div>
                <h4>名前: {{ candidate.name }}</h4>
                <h4>年齢: {{ candidate.age }}歳</h4>
                <h4>職業: {{ candidate.job }}</h4>
@@ -41,7 +41,7 @@
           </div>    
      </person>
      <p><br></p>
-     <a href="/{{candidate.id}}/delete" role="botton"><button class = "btn btn-danger">解除</button></a>
+     <a href="/{{candidate.id}}/delete" role="button"><button class = "btn btn-danger">解除</button></a>
      {% endfor %}
      {% if candidates |length > 0 %} 
      <p>--------------------------------------------------------</p> 
