@@ -106,3 +106,8 @@
 
 <img src = "https://user-images.githubusercontent.com/82374688/158979845-af480279-380e-474f-8cd5-ddd19241154d.png" width=400px>
 
+## あとがき
+<img src = "https://user-images.githubusercontent.com/82374688/163708744-60e4284f-54df-4617-8f59-25bbb957831b.png" width=500px>
+
+出場16チーム中、2位という結果となり、優秀賞を獲得できました。
+
