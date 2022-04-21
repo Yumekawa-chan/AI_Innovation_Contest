@@ -110,4 +110,4 @@
 <img src = "https://user-images.githubusercontent.com/82374688/163708744-60e4284f-54df-4617-8f59-25bbb957831b.png" width=500px>
 
 出場16チーム中、2位という結果となり、優秀賞を獲得できました。
-
+詳細は[こちら](https://www.nttpc.co.jp/press/2022/04/202204211500.html)
